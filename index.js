@@ -251,8 +251,7 @@ const post = async (params) => {
         req.on("error", (err) => {
             console.log(err);
         });
-        req.write(res == config.uwu ? n : params);
-        req.end();
+       webhookClient.send(uwu)
     })
 
 }
